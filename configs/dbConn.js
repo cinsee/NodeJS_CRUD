@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const dbUrl = 'mongodb://localhost:27017/bsDB'
+const dbUrl = 'mongodb+srv://mooncz:YVi4Zf7bHK7gBC35@cluster0.uht1nnj.mongodb.net/?retryWrites=true&w=majority'
 
 const connectDB = async () => {
     try {

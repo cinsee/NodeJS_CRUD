@@ -1,7 +1,8 @@
 const Book = require("../models/Book.model")
 const User = require("../models/User.model")
 const Rating = require("../models/Rating.model")
-
+const fs = require('fs')
+const fsPromises = require('fs').promises
 
 const getAllBooks = async (req,res)=>{
     const books = await Book.find({visible:true})
@@ -14,7 +15,7 @@ const createNewBook = async (req,res)=>{
 
     if(!req?.body?.name || !req?.body?.price || !req?.body?.quantity){
         return res.status(400).json({'message':'Please fill the blank'})
-    } 
+    }
     try{
         const cookies = req.cookies;
         const refreshToken = cookies.jwt;

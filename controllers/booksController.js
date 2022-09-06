@@ -36,13 +36,13 @@ const createNewBook = async (req,res)=>{
             ratingCount: 0,
             rating: 0
         })
-        const rating = await Rating.create({
-            bookId:result._id,
-            bookName:result.name,
-            userId: userId,
-            rating: 0,
-            editable:true
-        })
+        // const rating = await Rating.create({
+        //     bookId:result._id,
+        //     bookName:result.name,
+        //     userId: userId,
+        //     rating: 0,
+        //     editable:true
+        // })
         res.status(201).json(result)
     }catch(err){
         console.error(err)

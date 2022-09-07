@@ -27,7 +27,6 @@ app.use("/",require("./routes/root"))
 app.use("/login",require("./routes/login"))
 app.use("/register",require("./routes/register"))
 app.use("/auth",require("./routes/auth"))
-app.use("/refresh",require("./routes/refresh"))
 app.use("/logout",require("./routes/logout"))
 
 
